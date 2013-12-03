@@ -11,15 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131203151210) do
+ActiveRecord::Schema.define(version: 20131203165323) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "products", force: true do |t|
     t.text     "name"
-    t.decimal  "price"
-    t.text     "images",      default: [], array: true
+    t.decimal  "price",       precision: 8, scale: 2
+    t.text     "images",                              default: [], array: true
     t.text     "materials"
     t.text     "description"
     t.integer  "sku"
