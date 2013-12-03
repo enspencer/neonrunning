@@ -1,7 +1,24 @@
 <div class='panel'>
-<div>
-  <h2><%= @product.name %></h2>
-  <p class="lead">$<%= @product.price %></p>
-  <img src="<%= @product.images.first %>">
+  <div>
+    <div class='left-stuff'>
+      <h2><%= @product.name %></h2>
+      <p class="lead">$<%= @product.price %></p>
+      <img class="single-item" src="<%= @product.images.first %>">
+    </div>
+  </div>
+  <div class='right-stuff'>
+    <h5><%= @product.description %></h5>
+    <h6>Materials: <%= @product.materials %></h6>
+
+    <a href="#" class="button small" data-dropdown="drop1">Choose A Size</a>
+    <ul id="drop1" class="f-dropdown" data-dropdown-content>
+      <li><a href="#">extra-small</a></li>
+      <li><a href="#">small</a></li>
+      <li><a href="#">medium</a></li>
+      <li><a href="#">large</a></li>
+      <li><a href="#">extra-large</a></li>
+    </ul>
+    <br/>
+    <a class="button">Add to Cart &raquo;</a>
   </div>
 </div>

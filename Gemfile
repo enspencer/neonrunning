@@ -12,6 +12,9 @@ gem 'pry-rails'
 # Use Foundation as a template
 gem 'zurb-foundation'
 
+# Use devise for user login
+gem 'devise'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 

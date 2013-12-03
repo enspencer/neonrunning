@@ -1,4 +1,7 @@
 Neonrunning::Application.routes.draw do
+
+  devise_for :users
+  root to: 'storefront#index'
   get "storefront/hello"
   get "storefront/index"
   get "storefront/cart"
