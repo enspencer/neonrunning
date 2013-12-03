@@ -10,7 +10,7 @@ gem 'pg'
 gem 'pry-rails'
 
 # Use Foundation as a template
-gem 'foundation-rails'
+gem 'zurb-foundation'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

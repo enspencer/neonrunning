@@ -1,14 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-  <script type="text/javascript" src="foundation-5.0.2/js/modernizr.js"></script>
-  <link rel="stylesheet" type="text/css" href="foundation-5.0.2/css/foundation.min.css">
-  <link rel="stylesheet" type="text/css" href="foundation-5.0.2/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="main.css">
   <title>Neon Running</title>
 </head>
 <body>
@@ -19,8 +14,6 @@
 <%= render "layouts/navbar" %>
 
     <%= yield %>
-
-
 
         <!-- Managed By -->
         <div class="row">
@@ -74,13 +67,8 @@
 
   </div>
 </div>
-<script type="text/javascript" src="foundation-5.0.2/js/jquery.js"></script>
-<script type="text/javascript" src="foundation-5.0.2/js/foundation.min.js"></script>
 <script>
 
-  $(function() {
-    $(document).foundation()
-  });
 </script>
 </body>
 </html>
