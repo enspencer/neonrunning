@@ -41,9 +41,12 @@
                 <ul class="dropdown">
                   <li><a href="cart">View Cart</a></li>
                   <li><a href="#">Checkout</a></li>
-                  <%= render 'devise/menu/login_items' %>
                 </ul>
               </li>
+              <ul class="hmenu">
+                <%= render 'devise/menu/registration_items' %>
+                <%= render 'devise/menu/login_items' %>
+              </ul>
             </ul>
           </section>
         </nav>
