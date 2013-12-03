@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= csrf_meta_tags %>
+  <script type="text/javascript" src="foundation-5.0.2/js/modernizr.js"></script>
+  <link rel="stylesheet" type="text/css" href="foundation-5.0.2/css/foundation.min.css">
+  <link rel="stylesheet" type="text/css" href="foundation-5.0.2/css/normalize.css">
+  <link rel="stylesheet" type="text/css" href="main.css">
+  <title>Neon Running</title>
+</head>
+<body>
+
+ <div class="row">
+  <div class="large-12 columns">
+
+<%= render "layouts/navbar" %>
+
+    <%= yield %>
+
+
+
+        <!-- Managed By -->
+        <div class="row">
+          <div class="large-12 columns">
+            <div class="panel">
+              <div class="row">
+
+                <div class="large-2 small-6 columns">
+                  <img src="http://www.dpaperwall.com/wp-content/uploads/neon-backgrounds-1920x1080p.jpg">
+                </div>
+
+                <div class="large-10 small-6 columns">
+                  <strong>This Site Is Managed By<hr/></strong>
+
+                  Risus ligula, aliquam nec fermentum vitae, sollicitudin eget urna. Donec dignissim nibh fermentum odio ornare sagittis
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+          <!-- End Managed By -->
+
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Footer -->
+
+    <footer class="row">
+      <div class="large-12 columns"><hr />
+        <div class="row">
+
+          <div class="large-6 columns">
+            <p>Copyright THE WORLD</p>
+          </div>
+
+          <div class="large-6 columns">
+            <ul class="inline-list right">
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Facebook</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </footer>
+
+    <!-- End Footer -->
+
+  </div>
+</div>
+<script type="text/javascript" src="foundation-5.0.2/js/jquery.js"></script>
+<script type="text/javascript" src="foundation-5.0.2/js/foundation.min.js"></script>
+<script>
+
+  $(function() {
+    $(document).foundation()
+  });
+</script>
+</body>
+</html>
