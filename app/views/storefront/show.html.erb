@@ -1,8 +1,9 @@
+
 <div class='panel'>
   <div>
     <div class='left-stuff'>
       <h2><%= @product.name %></h2>
-      <p class="lead">$<%= @product.price %></p>
+      <p class="lead"><%= number_to_currency @product.price %></p>
       <img class="single-item" src="<%= @product.images.first %>">
     </div>
   </div>
@@ -19,6 +20,8 @@
       <li><a href="#">extra-large</a></li>
     </ul>
     <br/>
-    <a class="button">Add to Cart &raquo;</a>
+    <div class="purchase-buttons">
+                <%= button_to "Add to cart", add_product_to_cart_path(@product) %>
+        </div>
   </div>
 </div>

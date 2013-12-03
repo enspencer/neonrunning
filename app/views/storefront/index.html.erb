@@ -1,39 +1,7 @@
 
 <div class="row">
 
-  <!-- Side Bar -->
-
-  <div class="large-4 small-12 columns">
-
-    <img src="http://www.dpaperwall.com/wp-content/uploads/neon-backgrounds-1920x1080p.jpg">
-
-    <div class="hide-for-small panel">
-      <h3>welcome to</h3>
-      <h3>neon running</h3>
-      <h5 class="subheader">apparel and gear for women who like to run in bright colors. duh.
-      </h5>
-    </div>
-
-    <div class="has-form">
-      <div class="row collapse">
-        <div class="large-8 small-9 columns">
-          <input type="text" placeholder="Find Stuff">
-        </div>
-        <div class="large-4 small-3 columns">
-          <a href="#" class="alert button expand">Search</a>
-        </div>
-      </div>
-    </div>
-
-    <a href="#">
-      <div class="panel callout radius">
-        <h6>99 items in your cart</h6>
-      </div>
-    </a>
-
-  </div>
-
-  <!-- End Side Bar -->
+<%= render 'layouts/sidebar' %>
 
 
   <!-- Thumbnails -->
@@ -42,12 +10,12 @@
     <div class="row">
       <% @products.each do |product| %>
       <div class="large-4 small-6 columns product-wrapper">
-      <a href="<%= product.id %>">
+      <a href="/storefront/<%= product.id %>">
         <img class="thumb" src="<%= product.images.first %>">
 
         <div class="panel">
           <h5><%= product.name %></h5>
-          <h6 class="subheader"><%= product.price %></h6>
+          <h6 class="subheader"><%= number_to_currency product.price %></h6>
         </div>
         </a>
 

@@ -1,11 +1,12 @@
 Neonrunning::Application.routes.draw do
 
   devise_for :users
-  root to: 'storefront#index'
-  get "storefront/hello"
-  get "storefront/index"
-  get "storefront/cart"
-  get "storefront/:id" => 'storefront#show'
+  root 'storefront#index'
+  resources :storefront, only: [:index, :show, :hello]
+  resources :orders, only: [:index, :create]
+  post '/storefront/:product_id/add_to_cart', to: 'line_items#create', as: 'add_product_to_cart'
+  get '/cart', to: 'line_items#index', as: 'cart'
+  delete '/cart/:id', to: 'line_items#delete', as: 'remove_product_from_cart'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
