@@ -1,6 +1,7 @@
 class LineItemsController < ApplicationController
   def create
     product = Product.find(params[:product_id])
+    product.size = params[:size]
     line_item = product.line_items.build(user: current_user)
     line_item.save
     redirect_to :cart

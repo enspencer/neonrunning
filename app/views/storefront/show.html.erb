@@ -11,17 +11,12 @@
     <h5><%= @product.description %></h5>
     <h6>Materials: <%= @product.materials %></h6>
 
-    <a href="#" class="button small" data-dropdown="drop1">Choose A Size</a>
-    <ul id="drop1" class="f-dropdown" data-dropdown-content>
-      <li><a href="#">extra-small</a></li>
-      <li><a href="#">small</a></li>
-      <li><a href="#">medium</a></li>
-      <li><a href="#">large</a></li>
-      <li><a href="#">extra-large</a></li>
-    </ul>
     <br/>
-    <div class="purchase-buttons">
-                <%= button_to "Add to cart", add_product_to_cart_path(@product) %>
-        </div>
+
+    <%= form_tag add_product_to_cart_path(@product) do %>
+        <%= select_tag "size", "<option value='small'>small</option><option value='medium'>medium</option><option value='large'>large</option>".html_safe %>
+         <div><%= submit_tag 'Add to cart' %></div>
+        
+        <% end %>
   </div>
 </div>

@@ -4,7 +4,8 @@
   <% @line_items.each do |item| %>
     <div>
       <%= item.product.name %>
-      <%= item.product.price %>
+      <%= number_to_currency item.product.price, locale: :us %>
+      <%= item.product.size %>
       <%= button_to "Remove", remove_product_from_cart_path(item), method: :delete %>
     </div>
   <% end %>
