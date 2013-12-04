@@ -25,6 +25,7 @@ var CreateProductCtrl = function($scope, $location, productData){
     $scope.formData.newProductName = '';
     $scope.formData.newProductDescription = '';
     $scope.formData.newProductPrice = '';
+    $scope.formData.newProductImage = '';
   };
 
 };

@@ -25,9 +25,11 @@ class StorefrontController < ApplicationController
 
   def create
     new_product = Product.new
+    new_product.images = []
     new_product.name = params[:new_product][:name]
     new_product.description = params[:new_product][:description]
     new_product.price = params[:new_product][:price]
+    new_product.images << params[:new_product][:images]
 
     if(new_product.valid?) 
       new_product.save!

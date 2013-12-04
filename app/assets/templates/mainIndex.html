@@ -2,7 +2,7 @@
 <br>
 <div class="large-8 columns">
   <div class="row">
-    <div ng-repeat="product in data.products">
+    <div ng-repeat="product in data.products | filter:search">
 
       <div class="large-4 small-6 columns product-wrapper">
         <a ng-click="viewProduct($index + 1)">

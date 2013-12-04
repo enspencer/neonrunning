@@ -26,8 +26,8 @@ angular.module('StoreFront').factory('productData', ['$http', function($http){
   }; // loadProduct function
 
   productData.createProduct = function(newProduct){
-    if(newProduct.newProductName == '' || newProduct.newProductdescription == '' || newProduct.newProductPrice == ''){
-      alert("Name, Description or Price is blank!");
+    if(newProduct.newProductName == '' || newProduct.newProductdescription == '' || newProduct.newProductPrice == '' || newProduct.newProductImage == ''){
+      alert("Name, Description, Image, or Price is blank!");
       return false;
     }
 
@@ -35,6 +35,7 @@ angular.module('StoreFront').factory('productData', ['$http', function($http){
       name: newProduct.newProductName,
       description: newProduct.newProductDescription,
       price: newProduct.newProductPrice,
+      images: newProduct.newProductImage
     }};
 
     $http.post('./products.json', data).
