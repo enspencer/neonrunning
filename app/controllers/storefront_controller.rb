@@ -19,6 +19,11 @@ class StorefrontController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+      respond_with(@product) do |format|
+        format.html
+        format.json { render :json => @product.as_json}
+      end 
+
   end
 
 end

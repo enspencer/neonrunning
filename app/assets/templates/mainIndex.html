@@ -3,7 +3,7 @@
   <h1>{{ title }}</h1>
     <div class="row" ng-repeat="product in data.products">
       <div class="large-4 small-6 columns product-wrapper">
-      <a ng-click="viewProduct($index)">
+      <a ng-click="viewProduct($index + 1)">
         <img class="thumb" ng-src=" {{ product.images.first }}">
 
         <div class="panel">
