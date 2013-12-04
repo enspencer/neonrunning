@@ -14,6 +14,12 @@ StoreFront.config(['$routeProvider', function($routeProvider){
   //     templateUrl: '../assets/mainProdcut.html',
   //       controller: 'PostCtrl'
   //       });
+
+  $routeProvider.when('/product', {
+      templateUrl: '../assets/mainProduct.html',
+        controller: 'ProductCtrl'
+        });
+
   // default route
   $routeProvider.otherwise({
       templateUrl: '../assets/mainIndex.html',

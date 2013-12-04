@@ -1,8 +1,9 @@
 Neonrunning::Application.routes.draw do
 
   get "main/index"
+  root 'main#index'
   devise_for :users
-  root 'storefront#index'
+  #root 'storefront#index'
   resources :storefront, only: [:index, :show, :hello]
   resources :orders, only: [:index, :create]
   post '/storefront/:product_id/add_to_cart', to: 'line_items#create', as: 'add_product_to_cart'

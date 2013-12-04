@@ -1,4 +1,4 @@
-var IndexCtrl = function($scope){
+var IndexCtrl = function($scope, $location){
   $scope.title = "Products";
 
    $scope.data = {products: [
@@ -6,4 +6,9 @@ var IndexCtrl = function($scope){
   {name: 'Product 2', description: "Product 2 description", price: 4.35},
   {name: 'Product 3', description: "Product 3 description", price: 20.45}
   ]};
+
+    $scope.viewProduct = function(){
+    $location.url('/product');
+  }         
+
 };

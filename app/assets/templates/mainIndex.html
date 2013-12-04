@@ -1,0 +1,15 @@
+  <div class="large-8 columns">
+  <br>
+  <h1>{{ title }}</h1>
+    <div class="row" ng-repeat="product in data.products">
+      <div class="large-4 small-6 columns product-wrapper">
+      <a ng-click="viewProduct()">
+        <img class="thumb" ng-src=" {{ product.images.first }}">
+
+        <div class="panel">
+          <h5>{{ product.name }}</h5>
+          <h6 class="subheader">{{ product.price }}</h6>
+        </div>
+        </a>
+      </div>
+    </div>
