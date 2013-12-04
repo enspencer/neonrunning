@@ -1,5 +1,6 @@
 Neonrunning::Application.routes.draw do
 
+  get "main/index"
   devise_for :users
   root 'storefront#index'
   resources :storefront, only: [:index, :show, :hello]

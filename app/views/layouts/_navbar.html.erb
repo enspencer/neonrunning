@@ -36,13 +36,14 @@
                 </ul>
               </li>
               <li class="divider"></li>
+              <% if user_signed_in? %>
               <li class="has-dropdown">
                 <a href="">Your Cart</a>
                 <ul class="dropdown">
                   <li><a href="/cart">View Cart</a></li>
-                  <li><a href="#">Checkout</a></li>
                 </ul>
               </li>
+              <% end %>
               <ul class="hmenu">
                 <%= render 'devise/menu/registration_items' %>
                 <%= render 'devise/menu/login_items' %>

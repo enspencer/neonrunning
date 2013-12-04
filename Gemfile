@@ -17,7 +17,11 @@ gem 'zurb-foundation'
 # Use devise for user login
 gem 'devise'
 
+# Use stripe for customer payments
 gem 'stripe'
+
+# User angular as a JS framework
+gem 'angularjs-rails'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
