@@ -5,4 +5,9 @@ var IndexCtrl = function($scope, $location, $http, productData){
   $scope.viewProduct = function(productId){
     $location.url('/product/' + productId);
   }
+
+   $scope.navNewProduct = function(){
+   $location.url('/product/new');
+ };
+
 };

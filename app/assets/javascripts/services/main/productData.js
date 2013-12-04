@@ -1,4 +1,4 @@
-angular.module('StoreFront').factory('productData',['$http', function($http){
+angular.module('StoreFront').factory('productData', ['$http', function($http){
   var productData = {products: [
     { name: 'Loading Products', description: "", price: ''} 
     ]};
@@ -24,6 +24,31 @@ angular.module('StoreFront').factory('productData',['$http', function($http){
         console.log('Failed to load product');
       });
   }; // loadProduct function
+
+  productData.createProduct = function(newProduct){
+    if(newProduct.newProductName == '' || newProduct.newProductdescription == '' || newProduct.newProductPrice == ''){
+      alert("Name, Description or Price is blank!");
+      return false;
+    }
+
+    var data = {new_product: {
+      name: newProduct.newProductName,
+      description: newProduct.newProductDescription,
+      price: newProduct.newProductPrice,
+    }};
+
+    $http.post('./products.json', data).
+    success(function(data){
+      productData.products.push(data);
+      console.log("Successfully created a new product");
+    }).
+    error(function(){
+      console.error("Failed to create a new product");
+    });
+
+    return true;
+  };
+
 
   return productData
 }]);
