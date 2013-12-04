@@ -1,2 +1,24 @@
-<h1>Main#index</h1>
-<p>Find me in app/views/main/index.html.erb</p>
+<div class="row">
+
+<%= render 'layouts/sidebar' %>
+
+
+  <!-- Thumbnails -->
+
+  <div class="large-8 columns" ng-controller="IndexCtrl">
+  <br>
+    <div class="row" ng-repeat>
+      <div class="large-4 small-6 columns product-wrapper">
+      <a href="/storefront/product.id">
+        <img class="thumb" src=" {{ product.images.first }} %>">
+
+        <div class="panel">
+          <h5>{{ product.name }}</h5>
+          <h6 class="subheader">{{ product.price }}</h6>
+        </div>
+        </a>
+
+      </div>
+    </div>
+
+        <!-- End Thumbnails -->
