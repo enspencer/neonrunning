@@ -5,20 +5,7 @@
 
   <!-- Thumbnails -->
 <div class="container" ng-view>
-  <div class="large-8 columns" ng-controller="IndexCtrl">
-  <br>
-  <h1>{{ title }}</h1>
-    <div class="row" ng-repeat="product in data.products">
-      <div class="large-4 small-6 columns product-wrapper">
-        <img class="thumb" ng-src=" {{ product.images.first }}">
 
-        <div class="panel">
-          <h5>{{ product.name }}</h5>
-          <h6 class="subheader">{{ product.price }}</h6>
-        </div>
-
-      </div>
-    </div>
 
         <!-- End Thumbnails -->
 
