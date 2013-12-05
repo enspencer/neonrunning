@@ -20,9 +20,16 @@ StoreFront.config(['$routeProvider', function($routeProvider){
     controller: 'CreateProductCtrl'
   });  
 
+// route for viewing single product
   $routeProvider.when('/product/:productId', {
       templateUrl: '../assets/mainProduct.html',
         controller: 'ProductCtrl'
+        });
+
+// route for adding to cart
+  $routeProvider.when('/cart', {
+      templateUrl: '../assets/mainCart.html',
+        controller: 'CartCtrl'
         });
 
   // default route
