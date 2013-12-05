@@ -1,7 +1,7 @@
   <!-- Side Bar -->
 
   <div class="large-4 small-12 columns">
-<br>
+    <br>
     <img src="http://cdn.superbwallpapers.com/wallpapers/artistic/colorful-neon-doors-16413-400x250.jpg">
 
     <div class="hide-for-small panel">
@@ -19,11 +19,11 @@
       </div>
     </div>
 
-    <a href="#">
-      <div class="panel callout radius">
-        <a href="/cart"><h6><%#= @line_items.count %> items in your cart</h6></a>
-      </div>
-    </a>
+    <% if @line_items %>
+    <div class="panel callout radius">
+      <a href="/cart"><h6><%= @line_items.count %> items in your cart</h6></a>
+    </div>
+    <% end %>
 
   </div>
 
